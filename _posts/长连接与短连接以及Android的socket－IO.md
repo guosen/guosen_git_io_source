@@ -26,3 +26,4 @@ http的长连接：
 
  # 参考文章
  ## http://www.jianshu.com/p/584707554ed7
+ http://blog.csdn.net/sdkfjksf/article/details/51645315
