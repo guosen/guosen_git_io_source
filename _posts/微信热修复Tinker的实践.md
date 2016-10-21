@@ -5,7 +5,7 @@ tags:
 - TInker
 - 热修复
 ---
-#Tinker热修复简介
+# Tinker热修复简介
 ## Tinker是微信开源出的Android热修复框架，基于MultiDex.
 
 #接入Tinker相关依赖
@@ -278,7 +278,7 @@ if (buildWithTinker()) {//在Tinker模式下复制bakApk(by shouwang)
 
 ``
 
-＃如何生成补丁，这边有几个步骤
+# 如何生成补丁，这边有几个步骤
 1.修改buildPatch.gradle里面tinkerOldApkPath的值（对应上个apk名称，就是要修复的APK）（运行项目会生成在APP/build/bakApk/ 目录下）
 2.要填写TinkerId的值，在gradle.properties里，项目里采用App-VersionName（默认是git版本号）
 3.修改buildPatch.gradle里tinkerEnabled的值为true(注：发版本的时候也要用true打包)
@@ -290,11 +290,11 @@ if (buildWithTinker()) {//在Tinker模式下复制bakApk(by shouwang)
 adb push ./Meiya/build/outputs/tinkerPatch/debug/patch_signed_7zip.apk /storage/sdcard0/
 ``
 
-#关于打包
-##我们需要保证tinkerId一定是要唯一性的，这里我们一定要注意，升级可客户端版本，需要更新tinkerId!
+# 关于打包
+## 我们需要保证tinkerId一定是要唯一性的，这里我们一定要注意，升级可客户端版本，需要更新tinkerId!
 
-#补丁加载
-##关于补丁加载，其实主要是项目Applicaion类的改造，改造的话主要是代理：
+# 补丁加载
+## 关于补丁加载，其实主要是项目Applicaion类的改造，改造的话主要是代理：
 ``bash
 public class APP extends TinkerApplication {
  private static APP sInstance;
